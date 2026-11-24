@@ -1,0 +1,9 @@
+project: savantenvs/pt-pc
+target: fuzz_mod_json
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mod_json/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mod_json
+    libfuzzer: true
+    timeout: 10

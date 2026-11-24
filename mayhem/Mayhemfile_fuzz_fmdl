@@ -1,0 +1,9 @@
+project: savantenvs/pt-pc
+target: fuzz_fmdl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fmdl/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fmdl
+    libfuzzer: true
+    timeout: 10

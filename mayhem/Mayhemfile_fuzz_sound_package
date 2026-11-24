@@ -1,0 +1,9 @@
+project: savantenvs/pt-pc
+target: fuzz_sound_package
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sound_package/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sound_package
+    libfuzzer: true
+    timeout: 10

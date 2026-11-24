@@ -1,0 +1,9 @@
+project: savantenvs/pt-pc
+target: fuzz_wwise_bank
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_wwise_bank/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_wwise_bank
+    libfuzzer: true
+    timeout: 10

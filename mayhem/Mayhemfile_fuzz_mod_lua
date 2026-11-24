@@ -1,0 +1,9 @@
+project: savantenvs/pt-pc
+target: fuzz_mod_lua
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mod_lua/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mod_lua
+    libfuzzer: true
+    timeout: 10

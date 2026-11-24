@@ -1,0 +1,9 @@
+project: savantenvs/pt-pc
+target: fuzz_fpk
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fpk/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fpk
+    libfuzzer: true
+    timeout: 10
